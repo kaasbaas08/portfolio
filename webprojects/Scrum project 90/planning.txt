@@ -1,0 +1,28 @@
+lennard: black jack
+Kars: slots
+Sven: higher or lower
+dominique: spin the wheel
+samuel: heads or tails
+
+iedereen maakt zijn game appart. als ze af zijn voeg ik ze toe aan de casino (Kars)
+We willen een login systeem maken met mySQL, met dat slaan we de data op. 
+
+
+opmaak
+
+extra features:
+- Geld systeem
+- popup die vraagt of je ouder bent dan 16
+- login page
+- account maak pagina
+- account database
+- guest user
+
+
+Week 1:
+    beginnen met inlog systeem.
+
+week 2:
+    Basis games maken.
+
+week 3:    Extra functies en opmaak.

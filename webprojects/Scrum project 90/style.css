@@ -1,0 +1,887 @@
+:root {
+    --primary: black;
+    --darkgrey: #131313;
+    --grey3: #1e1e1e;
+    --grey4: #363636;
+    --silver: silver;
+    --purple: rgb(111, 18, 224);
+    --darkpurple: rgb(84, 24, 189);
+    --border: rgb(47, 47, 47);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Montserrat, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--darkgrey);
+    color: white;
+    user-select: text;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    color: var(--silver);
+}
+
+a {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+a:hover {
+    color: var(--darkpurple);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background-color: var(--darkgrey);
+    z-index: 100;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header img {
+    width: 70px;
+    transition: all 1s;
+}
+
+header img:hover {
+    transform: rotate(360deg);
+}
+
+.logo {
+    width: 120px;
+    margin: 20px;
+    transition: all .7s;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+header div a {
+    text-decoration: none;
+    background-color: var(--darkpurple);
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+header div a:hover {
+    color: black;
+}
+
+header div a:first-child {
+    background-color: grey;
+}
+
+i {
+    margin: 0px 10px;
+    color: silver;
+}
+
+input[type="checkbox"] {
+    margin: 0px 10px;
+}
+
+button[type="submit"] {
+    width: 235px;
+    min-width: 235px;
+    outline: none;
+    border: none;
+    padding: 10px 0px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--grey3);
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+.accountsystem input {
+    outline: none;
+    border: none;
+    padding: 10px 0px;
+    min-width: 200px;
+    width: 200px;
+    font-size: 15px;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    background-color: var(--grey3);
+}
+
+.accountsystem div {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.accountsystem div svg {
+    background-color: var(--grey3);
+    height: 100%;
+    width: 25px;
+    padding: 0px 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.accountsystem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    height: 75vh;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 20px;
+}
+
+.leaderboard {
+    width: 100%;
+}
+
+.leaderboard b {
+    margin-right: 10px;
+}
+
+.leaderboard p {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--darkgrey);
+}
+
+.leaderboard i {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+    .info-card {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header div h2 {
+        display: none;
+    }
+
+    .info-card {
+        flex-direction: column;
+    }
+
+    .game-card img {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    main h2 {
+        display: none;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 20px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: calc(100vh - 135px);
+    background-color: var(--grey3);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info-card {
+    width: 49%;
+    display: flex;
+    background-color: var(--grey3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info-card h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 8px;
+}
+
+.info-card p {
+    font-size: 14px;
+    font-weight: 500;
+    color: silver;
+}
+
+.game-card {
+    position: relative;
+    height: 180px;
+    width: 180px;
+}
+
+.game-card img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.game-card span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.438);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+
+}
+
+.game-card:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.game-card span p {
+    color: white;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.game-card span button {
+    background: linear-gradient(to right, var(--purple), #8651c8);
+    color: var(--primary);
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.game-card span button:hover {
+    transform: scale(1.08);
+}
+
+.ad {
+    width: 170px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto 0;
+}
+
+.back {
+    position: absolute;
+    top: 95px;
+    left: 20px;
+    background-color: var(--grey3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.back a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    gap: 5px;
+    margin: 5px;
+}
+
+.back hr {
+    border: 2px solid var(--darkgrey);
+    width: calc(100% - 4px);
+}
+
+.back a svg {
+    width: 25px;
+}
+
+.aside-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.aside-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--darkgrey);
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    gap: 5px;
+}
+
+.aside-container div svg {
+    width: 25px;
+}
+
+.absolutefooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    border-top: 1px solid var(--grey3);
+    padding: 5px;
+    background-color: var(--darkgrey);
+}
+
+footer div:first-child {
+    display: flex;
+    align-items: center;
+    color: darkgrey;
+}
+
+footer div:first-child img {
+    width: 50px;
+    pointer-events: none;
+}
+
+footer div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer a {
+    color: darkgrey;
+    font-size: 14px;
+}
+
+.overheid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row !important;
+    margin: 15px;
+}
+
+.overheid img {
+    width: 130px;
+    object-fit: scale-down;
+}
+
+.radio-container {
+    margin: 0 auto;
+    max-width: 300px;
+    color: white;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-button:hover {
+    transform: translateY(-2px);
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-checkmark {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.radio-checkmark:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--darkpurple);
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked~.radio-checkmark:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*               */
+/* BLACKJACK CSS */
+/*               */
+
+.blackjack-body {
+    background: url("assets/images/blackjack-bg.jpeg");
+    background-size: cover;
+}
+
+.blackjack-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.blackjack-playerbutton {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.blackjack-dealerGUI {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.blackjack-eventBox {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+    width: 100%;
+}
+
+.blackjack-playerGUI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.blackjack-card {
+    max-width: 100%;
+    height: auto;
+    width: 80px;
+}
+
+.blackjack-playerbuttons {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.blackjack-restart-container {
+    display: flex;
+    justify-content: center;
+    align-self: start;
+}
+
+.blackjack-restart {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.blackjack-betbutton {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.blackjack-betfield {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/*              */
+/* roulette css */
+/*              */
+
+.roulette-body {
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(#000000, #000000, #464646, rgb(111, 18, 224), rgb(84, 24, 189));
+}
+
+.roulette-h1 {
+    color: black;
+}
+
+.roulette-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.roulette-button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.roulette-navigation {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.roulette-back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.roulette-revolver {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    display: flex;
+    align-items: center;
+    justify-content: ce;
+}
+
+.roulette-storie {
+    width: 500px;
+    height: 200px;
+}
+
+.roulette-back-to-main {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/*                  */
+/* slot machine css */
+/*                  */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 78vh;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+main section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    padding: 5px;
+    object-fit: cover;
+    pointer-events: none;
+    background-color: var(--grey3);
+}
+
+#slots-input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--grey3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#msg {
+    color: goldenrod;
+    font-weight: 600;
+}
+
+/*                       */
+/* Higher and lower css! */
+/*                       */
+
+.higher {
+    
+    color: lightgreen;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    font-size: 130%;
+    border: lightgreen solid 2px;
+}
+
+.row {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lower {
+    color: red;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    border: red solid 2px;
+    font-size: 130%;
+}
+
+.higherlower-card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+    align-items: center;
+
+}
+
+.card {
+    text-align: center;
+    border: 2px solid white;
+    width: 7%;
+    height: auto;
+    margin-top: 4%;
+}
+
+.card>* {
+    font-size: 250%;
+}
+
+
+
+.betslider {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2%;
+    align-items: center;
+}
+
+#higherlower-span {
+    margin: 15px;
+    text-align: center;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    border: 2px solid white;
+    width: 120px;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.card>* {
+    font-size: 150%;
+}
+
+.betslider {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2%;
+    align-items: center;
+}
+
+
+
+.row {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.higher,
+.lower {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    font-size: 120%;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100px;
+    }
+
+    .card>* {
+        font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 80px;
+
+    }
+
+    .card>* {
+        font-size: 100%;
+    }
+
+    .higher,
+    .lower {
+        padding: 1% 1%;
+        font-size: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .wrapper-main {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) {
+    .wrapper-main {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .card>* {
+        font-size: 150%;
+    }
+    .card span:last-child {
+        font-size: 60%;
+    }
+}
+.oldandnew {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
